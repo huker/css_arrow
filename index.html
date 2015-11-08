@@ -6,9 +6,49 @@
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
-<div class="main">
-    <div class="arrow_box"></div>
-</div>
+<div class="wapper">
+    <div class="main">
+        <div class="arrow_box"></div>
+    </div>
+    <div class="changevalue">
+        <form action="">
 
+            <ul class="changevalue_left">
+                <li><h3>positon</h3></li>
+                <li>
+                    <input type="radio" name="position" value="left">left
+                </li>
+                <li>
+                    <input type="radio" name="position" value="top">top
+                </li>
+                <li>
+                    <input type="radio" name="position" value="right">right
+                </li>
+                <li>
+                    <input type="radio" name="position" value="bottom">bottom
+                </li>
+            </ul>
+            <ul class="changevalue_right">
+                <li>
+                    <label>width</label>
+                    <input type="text" name="width"/> px
+                </li>
+                <li>
+                    <label>boder-color</label>
+                    <input type="text" name="bdcolor"/>
+                </li>
+                <li>
+                    <label>bgcolor</label>
+                    <input type="text" name="bgcolor"/>
+                </li>
+                <li>
+                    <label>boder-size</label>
+                    <input type="text" name="bdsize"/> px
+                </li>
+            </ul>
+        </form>
+    </div>
+</div>
+<script src="js/app.js"></script>
 </body>
 </html>
