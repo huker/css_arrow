@@ -6,29 +6,28 @@
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
 </head>
 <body>
-<div class="wapper">
+<div class="wapper"  ng-app="myApp" ng-controller="posCtrl">
     <div class="main">
-        <div class="arrow_box"></div>
+        <div ng-class="{boxLeft:isLeft,boxTop:isTop,boxRight:isRight,boxBottom:isBottom}"></div>
     </div>
     <div class="changevalue">
         <form action="">
-
-            <ul class="changevalue_left">
-                <li><h3>positon</h3></li>
+            <h3>positon</h3>
+            <ul class="changevalue_left" id="leftul">
                 <li>
-                    <input type="radio" name="position" value="left">left
+                    <input type="radio" name="position" ng-click="posLeft()">left
                 </li>
                 <li>
-                    <input type="radio" name="position" value="top">top
+                    <input type="radio" name="position" ng-click="posTop()">top
                 </li>
                 <li>
-                    <input type="radio" name="position" value="right">right
+                    <input type="radio" name="position" ng-click="posRight()">right
                 </li>
                 <li>
-                    <input type="radio" name="position" value="bottom">bottom
+                    <input type="radio" name="position" ng-click="posBottom()">bottom
                 </li>
             </ul>
-            <ul class="changevalue_right">
+            <ul class="changevalue_right" id="rightul">
                 <li>
                     <label>width</label>
                     <input type="text" name="width"/> px
@@ -49,6 +48,7 @@
         </form>
     </div>
 </div>
+<script src="js/angular.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

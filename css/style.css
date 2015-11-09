@@ -15,27 +15,55 @@ body{
 .main{
     width: 400px; margin: 0 auto; height: 230px; margin-top: 100px;
 }
-.arrow_box{
+.boxLeft,.boxTop,.boxRight,.boxBottom{
     position: relative; border: 5px solid #204d74; height: 230px;
     background: #CDD8E4;
 }
-.arrow_box:before,.arrow_box:after{
-    left: 50%; bottom: 100%; border:solid transparent;
-    height: 0; width: 0; border-width: 30px; content: ' ';
-    position: absolute; pointer-events: none;
+/*.arrow_box{*/
+    /*position: relative; border: 5px solid #204d74; height: 230px;*/
+    /*background: #CDD8E4;*/
+/*}*/
+.boxLeft:before,.boxLeft:after,.boxTop:before,.boxTop:after,.boxRight:before,.boxRight:after,.boxBottom:before,.boxBottom:after{
+    border:solid transparent;  height: 0; width: 0;
+    border-width: 30px; content: ' '; position: absolute; pointer-events: none;
 }
-.arrow_box:after {
-    /*border-color: rgba(136, 183, 213, 0);*/
-    border-bottom-color:#CDD8E4;
-    border-width: 30px;
-    margin-left: -30px;
+/*.arrow_box:before,.arrow_box:after{*/
+    /*left: 50%; bottom: 100%; border:solid transparent;*/
+    /*height: 0; width: 0; border-width: 30px; content: ' ';*/
+    /*position: absolute; pointer-events: none;*/
+/*}*/
+.boxTop:before,.boxTop:after{
+    left: 50%; bottom: 100%;
 }
-.arrow_box:before {
-    /*border-color: rgba(194, 225, 245, 0);*/
+.boxLeft:before,.boxLeft:after{
+    bottom: 50%; right: 100%;
+}
+.boxRight:before,.boxRight:after{
+    left: 100%; bottom: 50%;
+}
+.boxBottom:before,.boxBottom:after{
+    top: 100%; left: 50%;
+}
+.boxLeft:before,.boxTop:before,.boxRight:before,.boxBottom:before{
     border-bottom-color: #204d74;
     border-width: 36px;
-    margin-left: -36px;
 }
+.boxLeft:after,.boxTop:after,.boxRight:after,.boxBottom:after{
+    border-bottom-color:#CDD8E4;
+    border-width: 30px;
+}
+/*.arrow_box:after {*/
+    /*/!*border-color: rgba(136, 183, 213, 0);*!/*/
+    /*border-bottom-color:#CDD8E4;*/
+    /*border-width: 30px;*/
+    /*margin-left: -30px;*/
+/*}*/
+/*.arrow_box:before {*/
+    /*/!*border-color: rgba(194, 225, 245, 0);*!/*/
+    /*border-bottom-color: #204d74;*/
+    /*border-width: 36px;*/
+    /*margin-left: -36px;*/
+/*}*/
 .changevalue{
     width: 500px; margin: 0 auto; margin-top: 30px;
 }
